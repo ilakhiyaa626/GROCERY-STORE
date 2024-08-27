@@ -46,15 +46,13 @@ body {
     letter-spacing:1px;
     color:#202020;
 }
-
-
 .right-nav .like{
     background-color:white;
-    color:black;
+    color:#ff6c57;
 }
 .right-nav .cart{
     background-color:white;
-    color:black;
+    color:#4eb060;
 }
 .right-nav a span{
     position: absolute;
@@ -86,15 +84,17 @@ body {
     border-radius: 30px;
     background-color: #ecf7ee;
     margin:10px auto;
-    position: relative;
-    overflow: hidden;
-    background-image: url(../images/images/bg.png);
+    position:relative;
+    overflow:hidden;
+    background-image:url(../images/images/bg.png);
     background-repeat:no-repeat;
-    background-size: 1000px;
-    background-position:bottom right ;
-    padding: 20px;
-    display: flex;
-    align-items: center;
+    background-size:1000px;
+    background-position: bottom right;
+    padding:20px;
+    display:flex;
+    align-items:center;
+
+
 }
 .bg-1{
     position:absolute;
@@ -104,23 +104,25 @@ body {
     height:300px;
     object-fit:contain;
     object-position: center;
+
 }
 .bg-2{
-        position:absolute;
-        left:-60px;
-        transform: translateX(-60%);
-        top:-75px;
-        width: 150px;
-        height: 150px;
-        object-position: center;
-        object-fit: contain;
+ position:absolute;
+  left: 60%;
+  transform:translateX(-60%);
+  top:-75px;
+  width:150px;
+  height:150px;
+  object-position:center;
+  object-fit:contain;
+
 }
-.search-banner-text {
-    display: flex;
+.search-banner-text{
+    display:flex;
     flex-direction: column;
-    width: 500px;
+    width:500px;
     margin-left:70px;
-    position: relative;
+    position:relative;
 
 }
 .search-banner-text h1{
@@ -145,13 +147,13 @@ body {
     color:#3b3b3b;
     margin:0px 10px;
 }
-.search-box  .search-input
-{
+.search-box .search-input{
     height:40px;
-    border: none;
+    border:none;
     width:100%;
-    padding: 0px 10px;
+    padding:0px 10px;
     outline:none;
+
 }
 .search-box .search-btn{
     width: 220px;
@@ -170,24 +172,25 @@ body {
 
 }
 #category,
-#Featured-Products{
+#popular-product,
+#popular-bundle-pack{
     display:flex;
     flex-direction: column;
     max-width: 1000px;
     margin: 50px auto;
 }
 .category-heading,
-.Featured-Products{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.product-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 .category-heading h2,
 .product-heading h3{
-    font-size: 1.56rem;
-    font-weight: 700;
-    color: #202020;
-    letter-spacing: 0.5px;
+    font-size:1.56rem;
+    font-weight:700;
+    color:#202020;
+    letter-spacing:0.5px;
 }
 .category-container
 {
@@ -214,20 +217,260 @@ body {
     width: 50px;
     object-fit: fill;
     object-position: center;
-    transition: all ease 0.3s;
+    transition: all ease 0.1;
     
 }
-.category-box span{
-    color: #393939;
-    font-size: 0.8rem;
-    margin-top: 20px;
-    letter-spacing: 0.3px;
-    font-weight: 600;
+.category-box span,
+.product-heading span{
+    color:#393939;
+    font-size:0.8rem;
+    letter-spacing:0.3px;
+    font-weight:600;
 }
 .category-box:hover img{
-    transform: scale(1.1);
-    transition: all ease 0.1s;
+    transform:scale(1.1);
+    transition:all ease 0.1s;
+
+}
+#popular-product{
+    margin:80px auto;
+
+}
+.product-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:40px 0px;
+}
+.product-box{
+    width:300px;
+    border:1px solid #eeeeee;
+    background-color: #ffffff;
+    padding:20px;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+
+}
+.product-box img{
+    width:90%;
+    height:50px;
+    object-fit:contain;
+    object-position:center;
+    margin:auto;
+}
+.product-box strong{
+    color:#202020;
+    font-size:1.1rem;
+    letter-spacing:1px;
+    font-weight:600;
+    margin-top:10px;
+}
+.product-box .quantity{
+    color:#949494;
+    font-size:0.8rem;
+    font-weight:500;
+    letter-spacing:1px;  
+}
+.product-box .price{
+    margin-top: 10px;
+    font-size:1.4rem;
+    font-weight:600;
+    color:#393939;    
+}
+.product-box .cart-btn{
+    width:100%;
+    height:40px;
+    background-color: #ecf7ee;
+    color:#4eb060;
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+    transition: all ease 0.3s;
+}
+.product-box .cart-btn i{
+    margin-right:10px;
+}
+.product-box .cart-btn:hover{
+    background-color:#4eb060;
+    color:#ffffff;
+    transition: all ease 0.3s; 
+}
+.product-box .like-btn{
+    position:absolute;
+    right: 30px;
+    top:20px;
+    color:#c9c9c9;
+    font-size:1.3rem;
 
 
+
+}
+.banner-container{
+    display: flex;
+    flex-wrap:wrap;
+    gap:1.5rem;
+}
+.banner-container .banner{
+    flex:1 1 40rem;
+    height:23rem;
+    overflow: hidden;
+    position: relative;
+}
+.banner-container .banner img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+}
+.banner-container .banner .content{
+    position:absolute;
+    top:50%;
+    left:4%;
+    transform:translateY(-50%);
+
+}
+
+#download-app{
+    max-width: 1150px;
+    width:100%;
+    background-color: #ecf7ee;
+    height:400px;
+    margin: 225px auto;
+    border-radius: 20px;
+    padding:20px;
+    display: flex;
+    justify-content:right;
+}
+.app-img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: top center;
+}
+/* Container for the image and button */
+.banner-container-text {
+    position: relative; /* Positioning context for the button */
+    display: inline-block; /* Allows the container to fit the image */
+}
+
+/* Style for the image */
+.banner-container-text img {
+    display: block; /* Ensures the image fills the container */
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for the button */
+.banner-container-text button {
+    position: relative; /* Positioning relative to the container */
+    bottom: 0px; /* Distance from the bottom of the container */
+    left: 100px; /* Distance from the left of the container */
+    padding: 14px; /* Add padding */
+    background-color: rgb(78, 192, 78); /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 30px; /* Font size */
+    gap: 9px;
+
+
+    
+}
+
+.banner-container-text button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+.button-on-image {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    padding: 20px 40px; /* Increase padding for a larger button */
+    font-size: 20px; /* Larger text size */
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px; /* More rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-on-image:hover {
+    background-color: #45a049;
+}
+#banner-container
+{
+    max-width: 590px;
+    height:300px;
+    border-radius: 30px;
+    background-color: #fff5e1;
+    margin:10px auto;
+    position:relative;
+    overflow:hidden;
+    background-image:url(../images/images/offer\ frame.png);
+    background-repeat:no-repeat;
+    background-size:1000px;
+    background-position: bottom right;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    right: 190px;
+
+
+}
+.banner-container-text{
+    display:flex;
+    flex-direction: column;
+    width:500px;
+    margin-left:20px;
+    position:relative;
+
+}
+.banner-container-text h1{
+    font-size: 3rem;
+    line-height: 55px;
+    color: #253d4e;;
+}
+.banner-container-text strong{
+    color:grey;
+
+}
+#banner-container1
+{
+    max-width: 590px;
+    height:300px;
+    border-radius: 30px;
+    background-color: #e1ffe1;
+    margin:10px auto;
+    position:relative;
+    overflow:hidden;
+    background-image:url(../images/images/Rectangle\ 12.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: 10px 20px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    right:190px;
+    
+
+}
+.banner-container1-text{
+    display:flex;
+    flex-direction: column;
+    width:500px;
+    margin-left:20px;
+    position:relative;
+}
+.banner-container1-text h1{
+    font-size: 3rem;
+    line-height: 55px;
+    color: #253d4e;;
+}
+.banner-container1-text strong{
+    color:grey;
 
 }
