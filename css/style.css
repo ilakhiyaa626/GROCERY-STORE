@@ -331,84 +331,88 @@ body {
 
 }
 
-#download-app{
+#apps{
     max-width: 1150px;
-    width:100%;
-    background-color: #ecf7ee;
-    height:400px;
+    width:669;
+    height:716.71px;
     margin: 225px auto;
     border-radius: 20px;
-    padding:20px;
+    padding:30px;
     display: flex;
-    justify-content:right;
+    justify-content: top right;
+    left:651px;
+    radius:37px;
 }
-.app-img img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    object-position: top center;
+.apps img{
+    width:669px;
+    height:716.71px;
+    object-fit: contain;
+    object-position: top right;
+    left:651px;
+    radius:37px
 }
+
+
 /* Container for the image and button */
-.banner-container-text {
-    position: relative; /* Positioning context for the button */
-    display: inline-block; /* Allows the container to fit the image */
+.banner-container-text,
+ .banner-container1-text{
+    position: relative; /* Create positioning context for absolute positioning */
+    display: inline-block; /* Fit the container to the image */
 }
 
 /* Style for the image */
-.banner-container-text img {
-    display: block; /* Ensures the image fills the container */
+.banner-container-text img ,
+.banner-container1-text img{
+    display: block; /* Ensure the image fills the container */
     width: 100%; /* Make the image responsive */
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Style for the button */
+/* Style for the button within .banner-container-text */
 .banner-container-text button {
-    position: relative; /* Positioning relative to the container */
-    bottom: 0px; /* Distance from the bottom of the container */
-    left: 100px; /* Distance from the left of the container */
-    padding: 14px; /* Add padding */
+    position: absolute; /* Position relative to the .banner-container-text */
+    top: 200px; /* Distance from the bottom of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the button horizontally */
+    padding: 20px 40px; /* Increase padding for a larger button */
+    font-size: 18px; /* Larger font size for the button text */
     background-color: rgb(78, 192, 78); /* Green background */
     color: white; /* White text */
     border: none; /* Remove border */
-    border-radius: 10px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    font-size: 30px; /* Font size */
-    gap: 9px;
-
-
-    
+    border-radius: 12px; /* More rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    align-items: bottom;
 }
-
-.banner-container-text button:hover {
+.banner-container1-text button {
+    position: absolute; /* Position relative to the .banner-container-text */
+    top: 100px; /* Distance from the bottom of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the button horizontally */
+    padding: 20px 20px; /* Increase padding for a larger button */
+    font-size: 18px; /* Larger font size for the button text */
+    background-color: rgb(78, 192, 78); /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 12px; /* More rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    align-items: bottom;
+}
+.banner-container1-text button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
-.button-on-image {
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
-    padding: 20px 40px; /* Increase padding for a larger button */
-    font-size: 20px; /* Larger text size */
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    border-radius: 10px; /* More rounded corners */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-.button-on-image:hover {
-    background-color: #45a049;
-}
+
 #banner-container
 {
     max-width: 590px;
-    height:300px;
+    height:400px;
+    width:100%;
     border-radius: 30px;
     background-color: #fff5e1;
     margin:10px auto;
-    position:relative;
+    position:center;
     overflow:hidden;
     background-image:url(../images/images/offer\ frame.png);
     background-repeat:no-repeat;
@@ -418,6 +422,7 @@ body {
     display:flex;
     align-items:center;
     right: 190px;
+    object-fit: contain;
 
 
 }
@@ -445,7 +450,7 @@ body {
     border-radius: 30px;
     background-color: #e1ffe1;
     margin:10px auto;
-    position:relative;
+    position:center;
     overflow:hidden;
     background-image:url(../images/images/Rectangle\ 12.png);
     background-repeat:no-repeat;
@@ -473,4 +478,117 @@ body {
 .banner-container1-text strong{
     color:grey;
 
+}
+#offer{
+    width: 184px;
+height: 289px;
+top: 1700px;
+left: 600px;
+gap: 100px;
+opacity: 0px;
+
+}
+#offerframe{
+    width: 184px;
+height: 289px;
+top: 1700px;
+left: 600px;
+gap: 100px;
+opacity: 0px;
+
+}
+
+.banner {
+    position: relative; /* Allows absolute positioning of the buttons */
+    width: 100%; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    overflow: hidden; /* Hide any overflowed content */
+  }
+  
+  .banner-image {
+    position: absolute; /* Position the image absolutely within the container */
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Cover the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    transform: translate(-50%, -50%); /* Center the image */
+  }
+  
+  .buttons {
+    position: absolute; /* Position buttons absolutely within the container */
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center buttons horizontally */
+    display: flex; /* Arrange buttons in a row */
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .button img {
+    width: 150px; /* Adjust button size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra spacing */
+  }
+  #final-background
+  {
+      max-width: 1440px;
+      height:796px;
+      width: 100%;
+      border-radius: 30px;
+      background-color:#C5EAD9C7;
+      margin:10px auto;
+      position:relative;
+      overflow:hidden;
+      background-image:url(../images/images/backaground\ final.png);
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-position:cover;
+      padding:20px;
+      display:flex;
+      align-items:center;
+      right: 190px;
+      object-fit:fill;
+      margin-left: 930px;
+  
+  
+  }
+  #apple{
+      position: absolute;
+      bottom: 200px; /* Adjust this value to move the image up from the bottom */
+      left: 0; /* Align to the left; use right: 0 for right alignment */
+      width: 100px; /* Adjust as needed */
+      height: auto; 
+      
+  
+  }
+  
+  #android{
+      position: absolute;
+      bottom: 200px; /* Adjust this value to move the image up from the bottom */
+      right:1100px; /* Align to the left; use right: 0 for right alignment */
+      width: 100px; /* Adjust as needed */
+      height: auto; 
+  }
+  .phone1 h1{
+      font-size: 4rem;
+      line-height: 75px;
+      color: #253d4e;;
+  }
+  .phone1 strong{
+      color:grey;
+  }
+  .phone1 span{
+    font-size: 2rem;
+    color: grey;
+
+  }
+  #icon-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;   
+}
+
+#icon-container img {
+    max-width: 100%;
+    height: auto;
+    margin-right:-200px;
 }
